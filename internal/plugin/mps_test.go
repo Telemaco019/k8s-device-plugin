@@ -1,9 +1,10 @@
-package main
+package plugin
 
 import (
+	"testing"
+
 	"github.com/NVIDIA/k8s-device-plugin/internal/rm"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestMPSDeviceList_Subset(t *testing.T) {
