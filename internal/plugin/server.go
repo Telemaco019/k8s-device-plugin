@@ -296,9 +296,8 @@ func (plugin *NvidiaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.
 }
 
 func (plugin *NvidiaDevicePlugin) getAllocateResponse(requestIds []string) (*pluginapi.ContainerAllocateResponse, error) {
-	mpsDevices := plugin.getMPSDevices()
-		requestedMPSDevices := mpsDevices.Subset(ids)
-		deviceIDs := plugin.deviceIDsFromAnnotatedDeviceIDs(requestIds)
+
+	deviceIDs := plugin.deviceIDsFromAnnotatedDeviceIDs(requestIds)
 
 	responseID := uuid.New().String()
 	response, err := plugin.getAllocateResponseForCDI(responseID, deviceIDs)

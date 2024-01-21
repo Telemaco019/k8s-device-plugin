@@ -1,4 +1,4 @@
-package main
+package plugin
 
 import "github.com/NVIDIA/k8s-device-plugin/internal/rm"
 
